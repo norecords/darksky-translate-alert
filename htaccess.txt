@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /
+# Call dark_mod.php instead of darksky_forecast.json
+RewriteRule ^(.*/)?json/darksky_forecast.json json/dark_mod.php [L]
+
+
