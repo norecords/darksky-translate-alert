@@ -1,2 +1,9 @@
 Hack to translate darksky alerts from weewx Belchertown' skin.
 Cooked with apache rewrite and a little bit of php.
+
+Make sure you have php and apache rewrite enabled.
+
+Copy htaccess.txt to your Belchertown apache root (ex: /var/www/html/weewx)
+and rename it as `.htaccess`.
+
+Copy json/dark_mod.php to you Belchertown apache root (ex: /var/www/html/weewx/json).
