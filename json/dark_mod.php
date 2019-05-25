@@ -3,8 +3,8 @@
 $uri = '/var/www/html/weewx';
 
 // Alert translation array
-$darkAlertTitle = array("Moderate Thunderstorm Warning", "Modarate Rain-flood Warning");
-$tranAlertTitle = array("Alerte orage modéré.", "Alerte pluie modérée");
+$darkAlertTitle = array("Moderate Thunderstorm Warning", "Modarate Rain-flood Warning", "Moderate Thunderstorm Warning");
+$tranAlertTitle = array("Alerte orage modéré.", "Alerte pluie modérée", "Alerte orage modéré");
 
 // Departement météo france
 $dept = 83;
