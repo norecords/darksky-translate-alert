@@ -3,8 +3,16 @@
 $uri = '/var/www/html/weewx';
 
 // Alert translation array
-$darkAlertTitle = array("Moderate Thunderstorm Warning", "Modarate Rain-flood Warning");
-$tranAlertTitle = array("Alerte orage modéré.", "Alerte pluie modérée");
+$darkAlertTitle = array(
+	"Moderate Thunderstorm Warning",
+	"Modarate Rain-flood Warning",
+	"Moderate Flooding Warning"
+);
+$tranAlertTitle = array(
+	"Risque d'orage modéré.",
+	"Risque de pluie modéré",
+	"Risque d'inondation modéré"
+);
 
 // Departement météo france
 $dept = 83;
@@ -17,10 +25,14 @@ $json_data = json_decode($json_source, true);
 
 // If an alert title exist try to translate it
 if (isset($json_data['alerts'][0]['title'])) {
-  // replace the title
-  $json_data['alerts'][0]['title'] = str_replace($darkAlertTitle, $tranAlertTitle, $json_data['alerts'][0]['title']);
-  // adapt alert url to your region if needed otherwise comment next line.
-  $json_data['alerts'][0]['uri'] = $json_data['alerts'][0]['uri'] . 'Bulletin_sans.html?a=dept' . $dept . '&b=2&c=';
+  // Count number of alerts
+  $arr_length = count($json_data['alerts']);
+  for($i=0;$i<$arr_length;$i++) {
+    // replace the title
+    $json_data['alerts'][$i]['title'] = str_replace($darkAlertTitle, $tranAlertTitle, $json_data['alerts'][$i]['title']);
+    // adapt alert url to your region if needed otherwise comment next line.
+    $json_data['alerts'][$i]['uri'] = $json_data['alerts'][$i]['uri'] . 'Bulletin_sans.html?a=dept' . $dept . '&b=2&c=';
+  }
 }
 
 // Set header
