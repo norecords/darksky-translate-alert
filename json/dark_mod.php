@@ -5,11 +5,11 @@ $uri = '/var/www/html/weewx';
 // Alert translation array
 $darkAlertTitle = array(
 	"Moderate Thunderstorm Warning",
-	"Modarate Rain-flood Warning",
+	"Moderate Rain-flood Warning",
 	"Moderate Flooding Warning"
 );
 $tranAlertTitle = array(
-	"Risque d'orage modéré.",
+	"Risque d'orage modéré",
 	"Risque de pluie modéré",
 	"Risque d'inondation modéré"
 );
@@ -34,6 +34,8 @@ if (isset($json_data['alerts'][0]['title'])) {
     $json_data['alerts'][$i]['uri'] = $json_data['alerts'][$i]['uri'] . 'Bulletin_sans.html?a=dept' . $dept . '&b=2&c=';
   }
 }
+
+//print_r($json_data['alerts']);
 
 // Set header
 header('Content-Type: application/json;charset=UTF-8');
