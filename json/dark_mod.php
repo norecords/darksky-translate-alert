@@ -6,12 +6,14 @@ $uri = '/var/www/html/weewx';
 $darkAlertTitle = array(
 	"Moderate Thunderstorm Warning",
 	"Moderate Rain-flood Warning",
-	"Moderate Flooding Warning"
+	"Moderate Flooding Warning",
+	"Moderate Wind Warning"
 );
 $tranAlertTitle = array(
-	"Risque d'orage modéré",
-	"Risque de pluie modéré",
-	"Risque d'inondation modéré"
+	"Vigilance jaune orages",
+	"Vigilance jaune pluie",
+	"Vigilance jaune inondation",
+	"Vigilance jaune vent violent"
 );
 
 // Departement météo france
