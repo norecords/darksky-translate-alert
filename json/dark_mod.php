@@ -7,13 +7,15 @@ $darkAlertTitle = array(
 	"Moderate Thunderstorm Warning",
 	"Moderate Rain-flood Warning",
 	"Moderate Flooding Warning",
-	"Moderate Wind Warning"
+	"Moderate Wind Warning",
+	"Moderate High-temperature Warning"
 );
 $tranAlertTitle = array(
 	"Vigilance jaune orages",
 	"Vigilance jaune pluie",
 	"Vigilance jaune inondation",
-	"Vigilance jaune vent violent"
+	"Vigilance jaune vent violent",
+	"Vigilance jaune canicule"
 );
 
 // Departement météo france
