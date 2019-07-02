@@ -1,23 +1,51 @@
 <?php
+/*
+ * Darksky Alert Translator
+ * Written by Olivier Colle
+ *  --> https://github.com/norecords/darksky-translate-alert
+ * Licence GNU GPLv3 - Copyright 2019 meteo.correns.org
+ * Thanks to olpayras for translation help
+ * Thanks to prolabs for the wonderfull weewx skin he made
+ *  --> https://github.com/poblabs/weewx-belchertown
+*/
+
 // Belchertown root uri
 $uri = '/var/www/html/weewx';
 
 // Alert translation array
 $darkAlertTitle = array(
-	"Moderate Thunderstorm Warning",
-	"Moderate Rain-flood Warning",
-	"Moderate Flooding Warning",
-	"Moderate Wind Warning",
-	"Moderate High-temperature Warning",
-	"Severe High-temperature Warning"
+	"Moderate Thunderstorm Warning", // Vigilance jaune orages
+	"Severe Thunderstorm Warning",   // Vigilance orange orages
+	"Extreme Thunderstorm Warning",  // Vigilance rouge orages
+	"Moderate Rain-flood Warning",   // Vigilance jaune pluie
+	"Severe Rain-flood Warning",     // Vigilance orange pluie
+	"Extreme Rain-flood Warning",    // Vigilance rouge pluie
+	"Moderate Flooding Warning",     // Vigilance jaune inondation
+	"Severe Flooding Warning",       // Vigilance orange inondation
+	"Extreme Flooding Warning",      // Vigilance rouge inondation
+	"Moderate Wind Warning",         // Vigilance jaune vent violent
+	"Severe Wind Warning",           // Vigilance orange vent violent
+	"Extreme Wind Warning",          // Vigilance rouge vent violent
+	"Moderate High-temperature Warning",  // Vigilance jaune canicule
+	"Severe High-temperature Warning",    // Vigilance orange canicule
+	"Extreme High-temperature Warning"    // Vigilance rouge canicule
 );
 $tranAlertTitle = array(
 	"Vigilance jaune orages",
+	"Vigilance orange orages",
+	"Vigilance rouge orages",
 	"Vigilance jaune pluie",
+	"Vigilance orange pluie",
+	"Vigilance rouge pluie",
 	"Vigilance jaune inondation",
+	"Vigilance orange inondation",
+	"Vigilance rouge inondation",
 	"Vigilance jaune vent violent",
+	"Vigilance orange vent violent",
+	"Vigilance rouge vent violent",
 	"Vigilance jaune canicule",
-	"Vigilance orange canicule"
+	"Vigilance orange canicule",
+	"Vigilance rouge canicule"
 );
 
 // Departement météo france
