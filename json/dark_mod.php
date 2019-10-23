@@ -7,28 +7,31 @@
  * Thanks to olpayras for translation help
  * Thanks to prolabs for the wonderfull weewx skin he made
  *  --> https://github.com/poblabs/weewx-belchertown
-*/
+ */
 
 // Belchertown root uri
 $uri = '/var/www/html/weewx';
 
 // Alert translation array
 $darkAlertTitle = array(
-	"Moderate Thunderstorm Warning", // Vigilance jaune orages
-	"Severe Thunderstorm Warning",   // Vigilance orange orages
-	"Extreme Thunderstorm Warning",  // Vigilance rouge orages
-	"Moderate Rain-flood Warning",   // Vigilance jaune pluie
-	"Severe Rain-flood Warning",     // Vigilance orange pluie
-	"Extreme Rain-flood Warning",    // Vigilance rouge pluie
-	"Moderate Flooding Warning",     // Vigilance jaune inondation
-	"Severe Flooding Warning",       // Vigilance orange inondation
-	"Extreme Flooding Warning",      // Vigilance rouge inondation
-	"Moderate Wind Warning",         // Vigilance jaune vent violent
-	"Severe Wind Warning",           // Vigilance orange vent violent
-	"Extreme Wind Warning",          // Vigilance rouge vent violent
+	"Moderate Thunderstorm Warning",      // Vigilance jaune orages
+	"Severe Thunderstorm Warning",        // Vigilance orange orages
+	"Extreme Thunderstorm Warning",       // Vigilance rouge orages
+	"Moderate Rain-flood Warning",        // Vigilance jaune pluie
+	"Severe Rain-flood Warning",          // Vigilance orange pluie
+	"Extreme Rain-flood Warning",         // Vigilance rouge pluie
+	"Moderate Flooding Warning",          // Vigilance jaune inondation
+	"Severe Flooding Warning",            // Vigilance orange inondation
+	"Extreme Flooding Warning",           // Vigilance rouge inondation
+	"Moderate Wind Warning",              // Vigilance jaune vent violent
+	"Severe Wind Warning",                // Vigilance orange vent violent
+	"Extreme Wind Warning",               // Vigilance rouge vent violent
 	"Moderate High-temperature Warning",  // Vigilance jaune canicule
 	"Severe High-temperature Warning",    // Vigilance orange canicule
-	"Extreme High-temperature Warning"    // Vigilance rouge canicule
+	"Extreme High-temperature Warning",   // Vigilance rouge canicule
+	"Moderate Coastalevent Warning",      // Vigilance jaune vagues-submersion
+	"Severe Coastalevent Warning",        // Vigilance orange vagues-submersion
+	"Extreme Coastalevent Warning"        // Vigilance rouge vagues-submersion
 );
 $tranAlertTitle = array(
 	"Vigilance jaune orages",
@@ -45,7 +48,10 @@ $tranAlertTitle = array(
 	"Vigilance rouge vent violent",
 	"Vigilance jaune canicule",
 	"Vigilance orange canicule",
-	"Vigilance rouge canicule"
+	"Vigilance rouge canicule",
+	"Vigilance jaune vagues-submersion",
+	"Vigilance orange vagues-submersion",
+	"Vigilance rouge vagues-submersion"
 );
 
 // Departement météo france
@@ -68,8 +74,6 @@ if (isset($json_data['alerts'][0]['title'])) {
     $json_data['alerts'][$i]['uri'] = $json_data['alerts'][$i]['uri'] . 'Bulletin_sans.html?a=dept' . $dept . '&b=2&c=';
   }
 }
-
-//print_r($json_data['alerts']);
 
 // Set header
 header('Content-Type: application/json;charset=UTF-8');
