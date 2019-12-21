@@ -31,8 +31,12 @@ $darkAlertTitle = array(
 	"Extreme High-temperature Warning",   // Vigilance rouge canicule
 	"Moderate Coastalevent Warning",      // Vigilance jaune vagues-submersion
 	"Severe Coastalevent Warning",        // Vigilance orange vagues-submersion
-	"Extreme Coastalevent Warning"        // Vigilance rouge vagues-submersion
+	"Extreme Coastalevent Warning",       // Vigilance rouge vagues-submersion
+	"Moderate Snow-ice Warning",          // Vigilance jaune neige-verglas
+	"Severe Snow-ice Warning",            // Vigilance orange neige-verglas
+	"Extreme Snow-ice Warning"            // Vigilance rouge neige-verglas
 );
+
 $tranAlertTitle = array(
 	"Vigilance jaune orages",
 	"Vigilance orange orages",
@@ -51,7 +55,10 @@ $tranAlertTitle = array(
 	"Vigilance rouge canicule",
 	"Vigilance jaune vagues-submersion",
 	"Vigilance orange vagues-submersion",
-	"Vigilance rouge vagues-submersion"
+	"Vigilance rouge vagues-submersion",
+	"Vigilance jaune neige-verglas",
+	"Vigilance orange neige-verglas",
+	"Vigilance rouge neige-verglas"
 );
 
 // Departement météo france
